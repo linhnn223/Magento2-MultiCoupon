@@ -45,7 +45,6 @@ define([
             if (this.validate()) {
                 setCouponCodeAction(couponCode(), isApplied);
             }
-            couponInput = " ";
         },
         /**
          * Cancel using coupon
