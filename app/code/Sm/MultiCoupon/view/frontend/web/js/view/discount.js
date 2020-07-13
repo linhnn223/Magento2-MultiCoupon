@@ -35,7 +35,7 @@ define([
             var couponInput = document.getElementById("discount-code").value;
             if (couponCode()){
                 CouponArray = couponCode().split(',');
-                if (CouponArray.includes(couponInput) === false) {
+                if (!CouponArray.includes(couponInput)) {
                     CouponArray.push(couponInput);
                     couponCode(CouponArray.toString());
                 }
@@ -45,6 +45,7 @@ define([
             if (this.validate()) {
                 setCouponCodeAction(couponCode(), isApplied);
             }
+            couponInput = " ";
         },
         /**
          * Cancel using coupon
